@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ html{
+     scroll-behavior: smooth;
+ }
+ 
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    background-color: #24252A;
+
+}
+
+li, a, button{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo{
+    height: 85px;
+    width: 300px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.nav-links{
+    list-style: none;
+    cursor: pointer;
+}
+
+.nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links li a :hover{
+    color: #0088a9;
+}
+
+button{
+    padding: 9px 25px;
+    background-color: #61bc94;
+    color: #24252A;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer ;
+    transition: all 0.3s ease 0s;
+}
+
+
+button :hover{
+    background-color: rgba(10, 133, 163, 0.8);
+}
+
+
+
+
+ 
+
+ /* .navigacija{
+     background-color: rgb(12, 10, 110);
+     justify-content: space-between;
+     text-decoration: none;
+     display: flex;
+     letter-spacing: 2px;
+     text-align: right;
+ } */
+
+ 
+
+
+
+
+ /* ul li{
+     list-style: none;
+ } */
+
+/* LANDING STRANA */
+
+
+.hero{
+    background-image: url(./images/background.png);
+    background-position: center ;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    /* opacity: 70%; */
+}
+
+.hero h1{
+    font-size: 100px;
+    color: #145a3d;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+    font-size: 120px;
+}
+
+img {
+    opacity: 50%;
+}
+
+.hero-h4{
+    font-size: 50px;
+    font-weight: 5px;
+    color: #145a3d;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.landing-button{
+    font-size: 18px;
+    text-decoration: none;
+    background-color: #145a3d;
+    color: #fff;
+    border: #145a3d 2px solid;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.landing-button :hover{
+    background: rgb(35, 160, 35);
+    color: #fff;
+}
+
+/* O NAMA */
+
+.about{
+    /* background-image: url(./images/about-img.jpg); */
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+}
+
+.about-h2{
+    padding: 50px;
+    color: #145a3d;
+    font-size: 70px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about p{
+    color: #145a3d;
+    font-family: 'Montserrat', sans-serif;
+    font-size: x-large;
+}
+
+/* Proizvodi */
+
+.proizvodi-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15px;
+    color: #145a3d;
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.products{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.products .card{
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background-color: #99d0cc;
+    /* background: rgba(255, 255, 255, 0.1); */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.products .card .content {
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.products .card:hover .content {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.products .card .content h2 {
+    position: absolute;
+    top: -99px;
+    right: 30px;
+    font-size: 8em;
+    pointer-events: none;
+    /* color: rgba(255, 255, 255, 0.05); */
+}
+
+.products .card .content h3 {
+    font-size: 1.8rem;
+    color: #145a3d;
+    z-index: 1;
+}
+
+.products .card .content p {
+    font-size: 1rem;
+    color: #145a3d;
+    font-weight: 300;
+}
+
+.products .card .content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: rgb(236, 171, 171);
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+footer {
+    width: 100%;
+    position: static;
+    bottom: 0;
+    background: linear-gradient(to right, #00093c, #2b0b00);
+    color: #fff;
+    padding: 100px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+    align-items: center;
+}
+
+.footer-img {
+    height: 70px;
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+.row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col {
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.col:nth-child(2), .col:nth-child(3){
+    flex-basis: 15%;
+}
+
+.col h3 {
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.email-id {
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+ul li {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+hr {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.underline {
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow:hidden ;
+}
+
+.underline span {
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+@keyframes moving {
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    footer{
+        bottom: unset;
+    }
+    .col{
+        flex-basis: 100%;
+    }
+    .col:nth-child(2), .col:nth-child(3){
+        flex-basis: 100%;
+    }
+}
